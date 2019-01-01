@@ -25,10 +25,11 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   removeItem(item: any ) {
-    return this.shoppingCartService.removeItem(item);
+    this.shoppingCartService.removeItem(item);
   }
 
   addItem(item: any ) {
+    debugger
     this.shoppingCartService.addItem(item);
   }
 }
