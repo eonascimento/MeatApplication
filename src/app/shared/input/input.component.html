@@ -1,0 +1,7 @@
+<div class="form-group" [class.has-success]="iptNumber.valid && (iptNumber.dirty || iptNumber.touched)"
+                        [class.has-error]="!iptNumber.valid && (iptNumber.dirty || iptNumber.touched)">
+  <label class="control-label sr-only" for="inputSuccess"><i class="fa fa-check"></i> Número</label>
+  <input type="text" class="form-control" required  name="number" #iptNumber="ngModel" ngModel placeholder="Número" autocomplete="off">
+  <span class="help-block" *ngIf="iptNumber.valid && (iptNumber.dirty || iptNumber.touched)"><i class="fa fa-check"></i> Ok</span>
+  <span class="help-block" *ngIf="!iptNumber.valid && (iptNumber.dirty || iptNumber.touched)"><i class="fa fa-check"></i>Campo Obrigatório</span>
+</div>
